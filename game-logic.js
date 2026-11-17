@@ -2,7 +2,7 @@ export function classifyLane(row) {
   const phase = row % 12;
   return {
     road: row > 2 && [3, 4, 5, 10].includes(phase),
-    river: row > 2 && (phase === 7 || phase === 8),
+    river: row > 2 && (phase === 6 || phase === 8),
   };
 }
 
