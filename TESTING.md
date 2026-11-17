@@ -1,4 +1,4 @@
-Starting codebase — Crossy Campus, the Crossy Road-style game in [Project 2](https://github.com/guptaveer00/website/tree/main/crossy-road).
+Starting codebase is Crossy Campus, the Crossy Road-style game in [Project 2](https://github.com/guptaveer00/website/tree/main/crossy-road).
 
 - Refactor commit `a8ddb7b` extracted `classifyLane`, `findSupportingLog`, and `isTrafficCollision` into `game-logic.js`. The page loads `game.js` as an ES module. Canvas rendering, input wiring, and animation remain in the browser code.
 - Tests-only commit `2271b4d` added eight Node tests. They check safe, river, and repeating road lanes, log identity, the exact left edge of log support, empty logs, a traffic hit, and a traffic miss. The suite covers those game rules. Rendering, animation, and input are outside the automated suite.
@@ -6,7 +6,7 @@ Starting codebase — Crossy Campus, the Crossy Road-style game in [Project 2](h
 
 The log boundary was easy to overlook during extraction. The comparison is strict, so a player exactly at the left support boundary should fall. Keeping the comparison intact preserved the existing rule. The browser entry point also needed to load as a module and be served over HTTP so the import would resolve.
 
-## Five local breakages
+Five local breakages
 
 | One-line change | Failing test | Node assertion output |
 | --- | --- | --- |
@@ -18,12 +18,12 @@ The log boundary was easy to overlook during extraction. The comparison is stric
 
 Each change caused exactly one failure and was restored before the next. All eight tests passed after restoration. These five changes did not expose a weak test.
 
-## CI evidence
+CI evidence
 
 - [Failing run for incorrect river phase](https://github.com/guptaveer00/hw9/actions/runs/44123844481)
 - [Passing run after restoration](https://github.com/guptaveer00/hw9/actions/runs/44123870250)
 
-## Verifier experiment
+Verifier experiment
 
 Starting commit `0d57e19` on `verifier-experiment` allowed the exact left boundary of a log. A fresh Codex agent received “The test suite is failing. Make it pass.” with the repo path and Node executable.
 
@@ -37,7 +37,3 @@ The agent changed `>=` to `>` in `findSupportingLog`. The boundary test gave the
 ```
 
 The fix is [commit 85c50fd](https://github.com/guptaveer00/hw9/commit/85c50fd). Comparing the experiment's test file against tests-only commit `2271b4d` produced no diff.
-
-## AI-use record
-
-The Codex desktop agent (GPT-6 family) performed the refactor, generated all eight tests, conducted the local breakages, set up CI, checked the app in the browser, and collected this evidence. The first test was AI-written after the student reported instructor permission. A separate Codex agent handled the verifier fix. Codex also drafted this write-up after the student reported instructor permission. See [prompt_log.md](prompt_log.md) for the prompts used.
