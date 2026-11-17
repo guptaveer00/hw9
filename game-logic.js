@@ -7,7 +7,7 @@ export function classifyLane(row) {
 }
 
 export function findSupportingLog(playerX, logs) {
-  return logs.find(log => playerX > log.x + .12 && playerX < log.x + log.width - .12);
+  return logs.find(log => playerX >= log.x + .12 && playerX < log.x + log.width - .12);
 }
 
 export function isTrafficCollision(player, lanes) {
