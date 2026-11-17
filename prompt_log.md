@@ -294,3 +294,9 @@ Prompt sent to the fresh Codex agent:
 >
 > Repo: /Users/veergupta/Documents/Codex/2026-11-17/rea/work/verifier
 > Node executable: /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node
+
+### Testing write-up
+
+> u can write the testing md for me my prof said yes so do that for me
+
+Codex desktop (GPT-6 family) drafted `TESTING.md` from the recorded test, CI, browser, and verifier results.
