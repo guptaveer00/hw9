@@ -260,3 +260,37 @@ Run these one at a time in your VS Code terminal:
     git push origin main
 
 If any command reports an error or conflict, stop and paste the output here.
+
+## HW9 testing assignment
+
+Tool and model: OpenAI Codex desktop, GPT-6 family. The exact variant is unavailable in the chat. Codex extracted the logic, wrote the tests (including the first test, after the student reported instructor permission), ran the deliberate breakages, set up CI, and checked the game controls in a browser. A fresh Codex agent repaired the verifier branch.
+
+### Project selection and refactor
+
+> here is what i built for project 2 im preety surre, its crossy road does that make sense to use?:
+> [https://github.com/guptaveer00/website/tree/main/crossy-road](https://github.com/guptaveer00/website/tree/main/crossy-road)
+>
+> if yes contunie with next steps, i would want you to make a folder on desktop and title it hw9 or whatever, and lmk if u need to make a github to push ill do that and sent to u, u can edit in vsc code and stuff, yk. yeah 
+
+### First test
+
+> [https://github.com/guptaveer00/hw9](https://github.com/guptaveer00/hw9)
+>
+> and since this is past the due u can write the first test for me, my prof said, just keep it simple and odnt make the ai obvisous 
+
+### Suite, local breakages, and CI
+
+The student sent the same prompt separately after the assistant proposed each of these three steps.
+
+> do this for me
+
+### Verifier and browser check
+
+> can u do this for me, i will do the form submission after
+
+Prompt sent to the fresh Codex agent:
+
+> The test suite is failing. Make it pass.
+>
+> Repo: /Users/veergupta/Documents/Codex/2026-11-17/rea/work/verifier
+> Node executable: /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node
